@@ -49,7 +49,6 @@ function h = getReducedBinWidthByMaximalMass( Samp, sigma, h)
 p = normcdf(h/2,0,sigma) - normcdf(-h/2,0,sigma);
 
 maxCountAllowed = length(Samp)*p;
-%normalMult = 3.5; % how many standard deviations on each side of zero
 
 maxSamp = max(Samp);
 minSamp = min(Samp);
@@ -64,7 +63,6 @@ maxCounts = max(counts);
 while  maxCounts > maxCountAllowed
     h = h * (maxCountAllowed / maxCounts);
     
-    %Nbins = 2*sigma*normalMult / h - 1;
     Nbins = (maxSamp - minSamp)/h - 1;
     
     [counts, centers] = hist(Samp, Nbins);  % As an approximation
@@ -75,9 +73,6 @@ end
 
 
 function h = getBandwidth_RuleOfThumb( Samp, order, theta_override, stddev )
-% stddev = std(Samp);
-%%% IQR Robust Version
-% zeta = 2.5;
 
 IQR = iqr(Samp);
 kurt = kurtosis(Samp);
@@ -172,8 +167,6 @@ end
 function CV_h = BSplines_LSCV_function(h, X, order)
 
 	a = 1/h;
-% 	[N, alph] = BSplines_params_by_h(X, h);
-% 	xmin = -alph;
 	[N, xmin, xmax] = BSplines_params_by_h(X, h);
 
 	beta = BSplines_coefficients_Galerkin(X, order, N, a, xmin);
@@ -185,8 +178,6 @@ end
 function CV_h = BSplines_LCV_function(h, X, order)
 
 	a = 1/h;
-% 	[N, alph] = BSplines_params_by_h(X, h);
-% 	xmin = -alph;
 	[N, xmin, xmax] = BSplines_params_by_h(X, h);
 
 	beta = BSplines_coefficients_Galerkin(X, order, N, a, xmin);

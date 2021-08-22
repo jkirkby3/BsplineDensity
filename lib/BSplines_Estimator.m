@@ -1,6 +1,14 @@
 function [grid, beta] = BSplines_Estimator( X, order, coeff_method, bandwidth_method, enforce_positive, theta_override, filter_type, filter_order)
 % Estimate the B-spline density coefficients using a variety of methods
 %
+% Author:      Justin Kirkby / Alvaro Leitao
+% References: 1) Nonparametric Density Estimation by B-spline Duality. Cui,
+%                Kirkby and Nguyen (2019).
+%             2) Nonparametric Density Estimation and Bandwidth Selection
+%   `           with B-spline bases: a Novel Galerkin Method. Kirkby, Leitao and Nguyen, (2021)
+%
+% Parameters:
+% ------------------------
 % X: sample of data (univariate)
 % order: order of B-splines, 1 works for all methods (linear)
 %

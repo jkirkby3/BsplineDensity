@@ -1,5 +1,5 @@
 function y = BSpline2(order,a,x,c)
-%Basis Spline evaluation
+% B-Spline evaluation
 %   a = dilation factor  (ie resolution)
 %   c = center of spline (this is point x_n on the grid)
 %   n = order of spline
