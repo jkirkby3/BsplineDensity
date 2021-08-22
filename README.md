@@ -1,5 +1,5 @@
 # B-Spline Density Estimation Library
-Supports nonparameteric density estimation using B-Spline density estimator from univariate sample.
+Supports nonparametric density estimation using B-Spline density estimator from univariate sample.
 
 <b>Estimation methods supported:</b>
 <ul>
