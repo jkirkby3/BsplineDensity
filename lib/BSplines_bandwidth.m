@@ -36,7 +36,7 @@ switch(bw_method)
         h = getBandwidth_NormalRule( order, std(X), length(X), theta_override);
         
     otherwise
-        disp('Bandwidth selection method not implmented!!')
+        disp('Bandwidth selection method not implmented: ' + 'bw_method')
 end
 	
 

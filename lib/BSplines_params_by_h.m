@@ -1,4 +1,12 @@
 function [N, MIN, MAX] = BSplines_params_by_h(X, h, N_min, pow_2)
+% Get the number of basis elements, and the min/max points in the grid
+% 
+% Parameters:
+% -------------------
+% X: sample
+% h: bandwidth
+% N_min: minimum number of basis elements (regardless of sample properties)
+% pow_2: 1 to ensure that N is a power of 2 (used by ECF estimator)
 	
 %%%%%%%%%%%%%%%%%%% Botev's interval selection %%%%%%%%%%%%%%%%%%%%%%
 if nargin < 3

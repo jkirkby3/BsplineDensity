@@ -7,7 +7,7 @@
 % References: 1) Nonparametric Density Estimation by B-spline Duality. Cui,
 %                Kirkby and Nguyen (2019).
 %             2) Nonparametric Density Estimation and Bandwidth Selection
-%   `           with B-spline bases: a Novel Galerkin Method. Kirkby, Leitao and Nguyen, (2021)
+%                with B-spline bases: a Novel Galerkin Method. Kirkby, Leitao and Nguyen, (2021)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 [folder, name, ext] = fileparts(which( mfilename('fullpath')));
 cd(folder);
@@ -17,7 +17,7 @@ addpath('../lib')
 % ================
 % Parameters
 % ================
-coeff_method = 2; % 1 = Galerkin, 2 = ECF, 3 = Redner
+coeff_method = 4; % 1 = Galerkin, 2 = ECF, 3 = Redner
 bandwidth_method = 'LSCV';  % 'LSCV', 'LCV', 'RuleOfThumb', 'Plugin', 'NormalRule'
 order = 1;  % keep at 1 for now (linear basis)
 

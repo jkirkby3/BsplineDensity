@@ -5,7 +5,7 @@ function [grid, beta] = BSplines_Estimator( X, order, coeff_method, bandwidth_me
 % References: 1) Nonparametric Density Estimation by B-spline Duality. Cui,
 %                Kirkby and Nguyen (2019).
 %             2) Nonparametric Density Estimation and Bandwidth Selection
-%   `           with B-spline bases: a Novel Galerkin Method. Kirkby, Leitao and Nguyen, (2021)
+%                with B-spline bases: a Novel Galerkin Method. Kirkby, Leitao and Nguyen, (2021)
 %
 % Parameters:
 % ------------------------
@@ -79,6 +79,8 @@ elseif coeff_method == 3
     for i=1:N
         beta(i) = mean(BSpline2(order,a,X,grid(i)));
     end
+else
+    error("Unsupported coefficient method: " + coeff_method)
 end
 
 end

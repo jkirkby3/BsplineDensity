@@ -2,7 +2,7 @@ function beta = BSplines_coefficients_Galerkin(X, order, N, a, xmin, enforce_pos
 % Estimate Bspline density coefficients using Galerkin approach for linear or Haar basis
 %
 % Reference:  2) Nonparametric Density Estimation and Bandwidth Selection
-%   `           with B-spline bases: a Novel Galerkin Method. Kirkby, Leitao and Nguyen, (2021)
+%                with B-spline bases: a Novel Galerkin Method. Kirkby, Leitao and Nguyen, (2021)
 %
 % Parameters:
 % ------------------------
